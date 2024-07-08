@@ -1,1 +1,1 @@
-JavaFX and Scenebuilder TicTacToe
+JavaFX and Scenebuilder TicTacToe WITH AI (MINIMAX)
