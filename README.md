@@ -16,7 +16,7 @@ Run the main method in the TicTacToeApplication class
 
 <h2>Controls:</h2>
 <p>
-  Its TicTacToe (X always plays first)
+  Its TicTacToe (The losing player plays first, X is first initially)
 </p>
 <ul>
     <li><strong>Left Click:</strong> Places a peice</li>
