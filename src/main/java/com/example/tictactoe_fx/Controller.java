@@ -57,20 +57,19 @@ public class Controller implements Initializable {
                     //checks that win label isnt visible if game is still playing
                     if (!winLabel.getText().equals("")) {
                         winLabel.setText("");
-                    }
-
-                    button.setText(XO);
-                    //checks for a win
-                    if (checkWin()) {
-                        winLabel.setText(XO + ": WINS");
-                        restart();
-                        //checks for draw
-                    } else if (checkDraw()) {
-                        winLabel.setText("DRAW");
-                        restart();
-
                     } else {
-                        changeXO();
+                        button.setText(XO);
+                        //checks for a win
+                        if (checkWin()) {
+                            winLabel.setText(XO + ": WINS");
+                            restart();
+                            //checks for draw
+                        } else if (checkDraw()) {
+                            winLabel.setText("DRAW");
+                            restart();
+                        } else {
+                            changeXO();
+                        }
                     }
                     return;
                 }
@@ -116,6 +115,6 @@ public class Controller implements Initializable {
         Arrays.stream(buttonList)
                 .flatMap(Arrays::stream)
                 .forEach(button -> button.setText(""));
-        XO = "O";
+        changeXO();
     }
 }
